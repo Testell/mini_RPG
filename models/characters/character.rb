@@ -3,12 +3,10 @@ class Character
 
   def initialize(name, health, strength, dexterity, intelligence)
     self.name = name
-    self.level = level
     self.health = health
     self.strength = strength
     self.dexterity = dexterity
     self.intelligence = intelligence
-    self.experience = experience
   end
 
   def name=(value)
@@ -39,11 +37,19 @@ class Character
     @dexterity = value
   end
 
-  def inteligence=(value)
+  def intelligence=(value)
     unless value.is_a?(Integer)
-      raise TypeError, 'Inteligence must be an integer'
+      raise TypeError, 'Intelligence must be an integer'
     end
-    @inteligence = value
+    @intelligence = value
+  end
+
+  def display_details
+    pp "Name: #{@name}"
+    pp "Health: #{@health}"
+    pp "Strength: #{@strength}"
+    pp "Dexterity: #{@dexterity}"
+    pp "Intelligence: #{@intelligence}"
   end
 
 end

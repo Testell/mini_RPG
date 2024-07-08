@@ -1,12 +1,12 @@
-require_relative 'Character'
+require_relative 'character'
 
 class PlayerCharacter < Character
   attr_reader :level, :experience
 
-  def initialize(name, health, strength, dexterity, intelligence, level, experience)
-    super(name, health, strength, dexterity, intelligence)
+  def initialize( level = 1, experience = 0)
     self.level = level
     self.experience = experience
+    super(name, health, strength, dexterity, intelligence)
   end
 
   def level=(value)
@@ -16,11 +16,17 @@ class PlayerCharacter < Character
     @level = value
   end
 
-  def experience(value)
+  def experience=(value)
     unless value.is_a?(Integer)
       raise TypeError, 'Experience must be an integer'
     end
     @experience = value
+  end
+
+  def display_details
+    super
+    pp "Level: #{@level}"
+    pp "Experience: #{@experience}"
   end
   
 end
