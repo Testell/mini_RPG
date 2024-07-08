@@ -1,9 +1,10 @@
-require_relative 'models/characters/rogue'
+require_relative 'models/characters/character'
 require_relative 'models/characters/warrior'
+require_relative 'models/characters/rogue'
 
 character_classes = {
-  'Rogue' => Rogue,
-  'Warrior' => Warrior
+  'Warrior' => Warrior,
+  'Rogue' => Rogue
 }
 
 pp "Welcome to Mini-RPG"
@@ -26,5 +27,3 @@ if input.between?(1, character_classes.size)
 else
   pp "Invalid Selection"
 end
-
-  

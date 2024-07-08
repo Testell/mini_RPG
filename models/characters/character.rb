@@ -1,5 +1,5 @@
 class Character 
-  attr_reader :name, :health, :strength, :dexterity, :intelligence,
+  attr_reader :name, :health, :strength, :dexterity, :intelligence
 
   def initialize(name, health, strength, dexterity, intelligence)
     self.name = name
@@ -51,5 +51,4 @@ class Character
     pp "Dexterity: #{@dexterity}"
     pp "Intelligence: #{@intelligence}"
   end
-
 end
