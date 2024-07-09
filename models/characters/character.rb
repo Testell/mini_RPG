@@ -13,7 +13,7 @@ class Character
     unless value.is_a?(String)
       raise TypeError, 'Name must be a string'
     end
-    @name = value.capitalize
+    @name = value
   end
 
   def health=(value)
@@ -45,10 +45,10 @@ class Character
   end
 
   def display_details
-    pp "Name: #{@name}"
-    pp "Health: #{@health}"
-    pp "Strength: #{@strength}"
-    pp "Dexterity: #{@dexterity}"
-    pp "Intelligence: #{@intelligence}"
+    puts "Name: #{@name}"
+    puts "Health: #{@health}"
+    puts "Strength: #{@strength}"
+    puts "Dexterity: #{@dexterity}"
+    puts "Intelligence: #{@intelligence}"
   end
 end
