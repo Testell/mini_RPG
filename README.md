@@ -1,5 +1,9 @@
-# ruby-cli-template
+mini_RPG possibly the shortest RPG you've ever played.
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+Run ruby game.rb in the terminal to start the game.
 
-- Ruby version: `3.2.1`
+You will be prompted to name your character, just type your chosen name and hit enter.
+
+All other actions will prompt you with a list of options, type the corresponding number and hit enter.
+
+Enjoy!
